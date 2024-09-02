@@ -1,3 +1,7 @@
+# Server
+server:
+  port: 8081
+  
 # default yaml file with mysql driver
 spring:
   application:
