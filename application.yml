@@ -2,10 +2,11 @@
 server:
   port: 8081
   
-# default yaml file with mysql driver
+# default yaml file
 spring:
   application:
     name: your_springboot_project_name
+  # mysql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/your_database_name
@@ -19,6 +20,24 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+  # Oauth2 Client
+  security:
+    oauth2:
+      client:
+        registration:
+          google: # Google OAuth2 클라이언트 설정 예시
+            client-id: 
+            client-secret: 
+            scope: profile, email
+            redirect-uri: 
+            client-name: Google
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+            user-name-attribute: sub
+
 
 # Gmail SMTP
 mail:
