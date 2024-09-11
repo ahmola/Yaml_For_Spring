@@ -23,7 +23,7 @@ spring:
   # mongo
   data:
     mongodb:
-      uri: mongodb://localhost:27017/your_db_name
+      uri: mongodb://username:password@localhost:27017/your_db_name
   #reactive_mysql
   r2dbc:
     url: r2dbc:mysql://localhost:3306/mydb
