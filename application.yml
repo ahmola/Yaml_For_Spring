@@ -1,6 +1,6 @@
 # Server
 server:
-  port: 8081
+  port:
   
 # default yaml file
 spring:
@@ -33,6 +33,11 @@ spring:
       client:
         service-url:
           defaultZone: 
+      # netflix eureka server
+        registerWithEureka: false
+        fetchRegistry: false
+      server:
+        enableSelfPreservation: false
     # spring API Gateway
     gateway:
       routes:
