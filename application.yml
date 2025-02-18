@@ -24,6 +24,22 @@ spring:
   data:
     mongodb:
       uri: mongodb://username:password@localhost:27017/your_db_name
+  # netflix eureka client
+  cloud:
+    discovery:
+      enabled: true
+      service-id: api-gateway
+    eureka:
+      client:
+        service-url:
+          defaultZone: 
+    # spring API Gateway
+    gateway:
+      routes:
+        - id: 
+          uri: 
+          predicates:
+            - Path=
   #reactive_mysql
   r2dbc:
     url: r2dbc:mysql://localhost:3306/mydb
