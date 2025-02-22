@@ -1,6 +1,24 @@
 # Server
 server:
   port:
+
+# netflix eureka
+eureka:
+  # client
+  client:
+    service-url:
+      defaultZone: 
+  # netflix eureka server
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    enableSelfPreservation: false
+# eureka client
+spirng:
+  cloud:
+    discovery:
+      enabled: true
+      service-id:
   
 # default yaml file
 spring:
@@ -24,21 +42,8 @@ spring:
   data:
     mongodb:
       uri: mongodb://username:password@localhost:27017/your_db_name
-  # netflix eureka client
+  # spring cloud api gateway
   cloud:
-    discovery:
-      enabled: true
-      service-id: 
-    eureka:
-      client:
-        service-url:
-          defaultZone: 
-      # netflix eureka server
-        registerWithEureka: false
-        fetchRegistry: false
-      server:
-        enableSelfPreservation: false
-    # spring API Gateway
     gateway:
       routes:
         - id: 
