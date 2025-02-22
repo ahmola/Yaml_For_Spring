@@ -28,7 +28,7 @@ spring:
   cloud:
     discovery:
       enabled: true
-      service-id: api-gateway
+      service-id: 
     eureka:
       client:
         service-url:
